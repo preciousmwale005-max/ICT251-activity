@@ -1,0 +1,188 @@
+/* ---------- Base (element selectors) ---------- */
+* { box-sizing: border-box; }
+body {
+ margin: 0;
+ font-family: "Segoe UI", Arial, sans-serif;
+ font-size: 1rem;
+ line-height: 1.7;
+ color: #1f2933;
+ background-color: #eef3f7;
+}
+h1, h2, h3 { line-height: 1.25; }
+img, video {
+ max-width: 100%;
+ height: auto;
+}
+audio { width: 100%; }
+/* ---------- Header ---------- */
+header {
+ background-color: #12355b;
+ color: #ffffff;
+ text-align: center;
+ padding: 2rem 1rem;
+}
+header h1 {
+ margin: 0 0 0.5rem;
+ font-size: 2.4rem;
+ letter-spacing: 1px;
+}
+header p { margin: 0; font-size: 1.1rem; color: #d6e4f0; }
+/* ---------- Navigation ---------- */
+nav {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 0.5rem;
+ padding: 0.75rem;
+ background-color: #0b2545;
+}
+nav a {
+ color: #ffffff;
+ text-decoration: none;
+ padding: 0.4rem 0.8rem;
+ border-radius: 4px;
+}
+nav a:hover,
+nav a:focus {
+ background-color: #f4b942;
+ color: #0b2545;
+ outline: 2px solid #ffffff;
+}
+/* ---------- Main sections ---------- */
+main {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 1rem;
+}
+/* class selector: repeated sections. Shows the box model: padding, margin, border */
+.content-section {
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+ border: 2px solid #12355b;
+ border-radius: 8px;
+ background-color: #ffffff;
+}
+/* id selector: one unique section */
+#about {
+ background-color: #fff8e6;
+ border-color: #f4b942;
+}
+.content-section h2 {
+ margin-top: 0;
+ padding-bottom: 0.4rem;
+ color: #12355b;
+ border-bottom: 3px solid #f4b942;
+}
+.content-section h3 { color: #234e7d; }
+a { color: #0b5cad; }
+a:hover, a:focus { color: #7a3e00; }
+/* ---------- Photo gallery ---------- */
+.gallery {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 1rem;
+}
+.gallery figure {
+ margin: 0;
+ padding: 0.5rem;
+ border: 1px solid #b8c7d6;
+ border-radius: 6px;
+ background-color: #f7fafc;
+}
+.gallery img {
+ display: block;
+ width: 100%;
+ aspect-ratio: 4 / 3;
+ object-fit: cover;
+ border-radius: 4px;
+}
+.gallery figcaption {
+ margin-top: 0.5rem;
+ font-size: 0.9rem;
+ color: #3e4c59;
+}
+/* ---------- Media players ---------- */
+video {
+ display: block;
+ width: 100%;
+ border-radius: 6px;
+ background-color: #000000;
+}
+/* ---------- Table ---------- */
+table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 1rem;
+}
+caption {
+ caption-side: top;
+ text-align: left;
+ font-weight: bold;
+ padding-bottom: 0.5rem;
+ color: #12355b;
+}
+th, td {
+ border: 1px solid #b8c7d6;
+ padding: 0.6rem;
+ text-align: left;
+}
+th {
+ background-color: #12355b;
+ color: #ffffff;
+}
+tbody tr:nth-child(even) { background-color: #eef3f7; }
+/* ---------- Form ---------- */
+.note {
+ padding: 0.6rem 0.8rem;
+ background-color: #e8f1fb;
+ border-left: 4px solid #0b5cad;
+}
+.field { margin-bottom: 1rem; }
+label {
+ display: block;
+ margin-bottom: 0.3rem;
+ font-weight: bold;
+}
+input, select, textarea {
+ width: 100%;
+ padding: 0.6rem;
+ font: inherit;
+ border: 1px solid #7b8794;
+ border-radius: 4px;
+}
+input:focus, select:focus, textarea:focus {
+ outline: 3px solid #f4b942;
+ border-color: #12355b;
+}
+button {
+ padding: 0.7rem 1.5rem;
+ font: inherit;
+ font-weight: bold;
+ color: #ffffff;
+ background-color: #12355b;
+ border: 2px solid #12355b;
+ border-radius: 4px;
+ cursor: pointer;
+}
+button:hover,
+button:focus {
+ background-color: #f4b942;
+ color: #0b2545;
+ border-color: #0b2545;
+}
+/* ---------- Footer ---------- */
+footer {
+ text-align: center;
+ padding: 1.5rem 1rem;
+ background-color: #0b2545;
+ color: #ffffff;
+}
+footer p { margin: 0.25rem 0; }
+footer a { color: #f4b942; }
+/* ---------- Narrow screens ---------- */
+@media (max-width: 480px) {
+ header h1 { font-size: 1.8rem; }
+ .content-section { padding: 1rem; }
+ nav { flex-direction: column; align-items: stretch; text-align: center; }
+ th, td { padding: 0.4rem; font-size: 0.9rem; }
+}
